@@ -1,9 +1,9 @@
 graph TB
-    subgraph "DBSAssist AI System"
-        DA[DBSAssist Chatbot]
+    subgraph "DBS AI Assist System"
+        DA[DBS AI Assist Chatbot]
     end
 
-    subgraph "FinAssist Control Center"
+    subgraph "DBS AI Assist Control Center"
         CC[Dashboard]
         RT[Real-time Monitoring]
         SI[Sentiment Indicators]
