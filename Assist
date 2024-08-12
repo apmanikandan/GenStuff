@@ -1,0 +1,58 @@
+graph TB
+    subgraph "DBSAssist AI System"
+        DA[DBSAssist Chatbot]
+    end
+
+    subgraph "FinAssist Control Center"
+        CC[Dashboard]
+        RT[Real-time Monitoring]
+        SI[Sentiment Indicators]
+        HI[Human Intervention]
+    end
+
+    subgraph "AI Operations Team"
+        AOT[AI Ops Team]
+        MT[Monthly Training]
+    end
+
+    subgraph "Monitoring Processes"
+        DP[Daily Performance Review]
+        WU[Weekly Updates]
+        ME[Monthly Evaluations]
+        QR[Quarterly Retraining]
+        RM[Research Monitoring]
+    end
+
+    subgraph "Automated Tools"
+        APM[AI Performance Monitor]
+        MVCS[Model Version Control]
+        AAP[AI Analytics Platform]
+    end
+
+    DA --> |Feeds data to| CC
+    CC --> |Alerts| AOT
+    AOT --> |Monitors| CC
+    AOT --> |Attends| MT
+    
+    APM --> |Tracks metrics| DA
+    APM --> |Sends alerts| CC
+    MVCS --> |Manages versions| DA
+    AAP --> |Analyzes| DA
+
+    AOT --> |Conducts| DP
+    AOT --> |Performs| WU
+    AOT --> |Executes| ME
+    AOT --> |Oversees| QR
+    AOT --> |Engages in| RM
+
+    classDef system fill:#f9f,stroke:#333,stroke-width:4px;
+    classDef interface fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5;
+    classDef team fill:#ff9,stroke:#333,stroke-width:2px;
+    classDef process fill:#bfb,stroke:#333,stroke-width:2px;
+    classDef tool fill:#fbb,stroke:#333,stroke-width:2px;
+
+    class DA system;
+    class CC,RT,SI,HI interface;
+    class AOT,MT team;
+    class DP,WU,ME,QR,RM process;
+    class APM,MVCS,AAP tool;
